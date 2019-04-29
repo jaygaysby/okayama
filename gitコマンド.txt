@@ -1,6 +1,12 @@
 
-git clone https://github.com/jaygaysby/okayama.git
+git init
+
+githubにrepository作る。（「Initialize this repository with a README」はチェック入れない）
+URLコピー
+
+git add .
+git commit -m "first commit"
 
 git remote add origin 追加したいリポジトリURL
 
-git push --set-upstream origin master
+git push -u origin master
