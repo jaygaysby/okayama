@@ -1,0 +1,4 @@
+
+
+git remote add origin 追加したいリポジトリURL
+

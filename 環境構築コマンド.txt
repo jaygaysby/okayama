@@ -1,0 +1,23 @@
+docker-compose.ymlファイルの置いてあるディレクトリで実行。
+
+# Railsのコンテナを起動してRailsのプロジェクトを作成するコマンド
+$ docker-compose run web rails new . --force --database=mysql
+
+# Railsイメージのビルド実行コマンド(作成されたファイルをコンテナ内に取り込む為にもう一度ビルドしなあかん)
+$ docker-compose build
+
+# config/database.ymlの修正内容
+# default内の項目を修正
+password: password
+host: db
+
+# コンテナをデタッチドモード（バックグラウンド）で実行するコマンド
+$ docker-compose up -d
+
+# 「bundel exec」以降が、Railsのコンテナで実行するコマンド。dbが存在してなかったらdb作る
+$ docker-compose run web bundle exec rake db:create
+
+# 最後に、起動させる為にこれ！！！　(なぜかrestartじゃ無理やった)
+docker-compose stop 
+docker-compose up -d
+
