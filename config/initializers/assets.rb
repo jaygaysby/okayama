@@ -12,3 +12,16 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( calendar/core/main.css )
+Rails.application.config.assets.precompile += %w( calendar/bootstrap/main.css )
+Rails.application.config.assets.precompile += %w( calendar/timegrid/main.css )
+Rails.application.config.assets.precompile += %w( calendar/daygrid/main.css )
+Rails.application.config.assets.precompile += %w( calendar/list/main.css )
+
+Rails.application.config.assets.precompile += %w( calendar/core/main.js )
+Rails.application.config.assets.precompile += %w( calendar/interaction/main.js )
+Rails.application.config.assets.precompile += %w( calendar/bootstrap/main.js )
+Rails.application.config.assets.precompile += %w( calendar/daygrid/main.js )
+Rails.application.config.assets.precompile += %w( calendar/timegrid/main.js )
+Rails.application.config.assets.precompile += %w( calendar/list/main.js )
+Rails.application.config.assets.precompile += %w( calendar/theme-chooser.js )
